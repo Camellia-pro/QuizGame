@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="798.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.QuestionController">
+   <children>
+      <ImageView fitHeight="798.0" fitWidth="1095.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="752.0" fitWidth="1117.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@paper.png" />
+         </image>
+      </ImageView>
+      <GridPane prefHeight="798.0" prefWidth="1095.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="492.0" minHeight="10.0" prefHeight="421.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="393.0" minHeight="10.0" prefHeight="377.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="answer1" mnemonicParsing="false" onAction="#nextAnswer1" prefHeight="90.0" prefWidth="300.0" style="-fx-background-color: rgba(181, 181, 181, 0.35);" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="280.0" left="220.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="answer2" mnemonicParsing="false" onAction="#nextAnswer2" prefHeight="90.0" prefWidth="300.0" style="-fx-background-color: rgba(181, 181, 181, 0.35);" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="80.0" left="220.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="answer3" mnemonicParsing="false" onAction="#nextAnswer3" prefHeight="90.0" prefWidth="300.0" style="-fx-background-color: rgba(181, 181, 181, 0.35);" text="Вариант ответа 2" textAlignment="CENTER" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="280.0" right="220.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="answer4" mnemonicParsing="false" onAction="#nextAnswer4" prefHeight="90.0" prefWidth="300.0" style="-fx-background-color: rgba(181, 181, 181, 0.35);" text="Вариант ответа 4" textAlignment="CENTER" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="80.0" right="220.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Label fx:id="question" alignment="CENTER" prefHeight="204.0" prefWidth="656.0" text="NextQuestion" textAlignment="CENTER" wrapText="true">
+               <GridPane.margin>
+                  <Insets left="220.0" top="200.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="number" text="/25" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets bottom="100.0" right="250.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Button fx:id="End" mnemonicParsing="false" onAction="#goEnd" prefHeight="46.0" prefWidth="143.0" style="-fx-background-color: rgba(181, 181, 181, 0.35); -fx-border-color: #000000;" text="Завершить">
+               <GridPane.margin>
+                  <Insets bottom="100.0" left="220.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

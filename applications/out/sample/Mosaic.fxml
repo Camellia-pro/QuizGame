@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="798.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MosaicController">
+
+    <children>
+        <ImageView fitHeight="798.0" fitWidth="1095.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Main.png" />
+            </image>
+        </ImageView>
+      <GridPane prefHeight="798.0" prefWidth="1095.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+                     <Canvas fx:id="canvasMosaic" height="798.0" onMouseClicked="#actionClick" width="611.0" />
+      
+      
+              <Label fx:id="labelCount" text="Выберите 8 секторов" textFill="WHITE" GridPane.columnIndex="1">
+                  <font>
+                      <Font size="30.0" />
+                  </font>
+               <GridPane.margin>
+                  <Insets bottom="400.0" left="150.0" />
+               </GridPane.margin>
+              </Label>
+      
+              <Button fx:id="Save" mnemonicParsing="false" onAction="#saveImg" prefHeight="53.0" prefWidth="284.0" style="-fx-background-color: black; -fx-border-color: white;" text="Сохранить картинку" textFill="WHITE" GridPane.columnIndex="1">
+                  <effect>
+                      <DropShadow color="#cd1717" />
+                  </effect>
+                  <font>
+                      <Font size="24.0" />
+                  </font>
+               <GridPane.margin>
+                  <Insets left="150.0" />
+               </GridPane.margin>
+              </Button>
+      
+              <Button fx:id="Back" mnemonicParsing="false" onAction="#exitGame" prefHeight="53.0" prefWidth="284.0" style="-fx-background-color: black; -fx-border-color: white;" text="Выйти из игры" textFill="WHITE" GridPane.columnIndex="1">
+                  <effect>
+                      <DropShadow color="#cd1717" />
+                  </effect>
+                  <font>
+                      <Font size="24.0" />
+                  </font>
+               <GridPane.margin>
+                  <Insets left="150.0" top="200.0" />
+               </GridPane.margin>
+              </Button>
+         </children>
+      </GridPane>
+
+    </children>
+</AnchorPane>
